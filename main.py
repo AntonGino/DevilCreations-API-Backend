@@ -2,6 +2,8 @@
 from flask import Flask, request, jsonify
 import os
 import requests
+from flask_cors import CORS
+CORS(app, origins=["https://antongino.github.io"])
 
 app = Flask(__name__)
 HF_API_KEY = os.environ.get("HF_API_KEY")
